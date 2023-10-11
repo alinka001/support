@@ -8,7 +8,11 @@ class TicketSerializer(serializers.ModelSerializer):
         model = Ticket
         fields = ('author', 'description', 'message', 'status', 'created_at', 'id')
 
+
+
         def create(self, validated_data):
+            print(validated_data)
+            validated_data['author'] = self.context['request'].user
             author = validated_data.get('author')
             description = validated_data.get('description')
             message = validated_data.get('message')
@@ -66,3 +70,8 @@ class FeedbackSerializer(serializers.ModelSerializer):
             except ValidationError as e:
                 raise serializers.ValidationError({'feedback': e})
             return feedback
+
+
+class CombinedSerializer(serializers.Serializer):
+    ticket = TicketSerializer()
+    answer = AnswerSerializer()
