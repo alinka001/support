@@ -1,0 +1,39 @@
+register
+{
+    "username": "alinauser",
+    "first_name": "user",
+    "last_name": "user",
+    "email": "fsdafsdfa@mail.ru",
+    "password": "qwerty12345qwerty",
+    "is_employee": "False"
+}
+
+new ticket
+
+{
+    "author": "1",
+    "description": "fsfsdfsad",
+    "message": "sfsfsdfa"
+}
+
+{
+
+    "username": "alinauser1",
+    "password": "qwerty12345qwerty"
+
+}
+create/update
+{
+    "author": "1",
+    "description": "ticket",
+    "message": "ticket1"
+}
+answer create
+{
+
+    "ticket_id": 1,
+    "answer": "ticket"
+}
+header
+Authorization Token 6a0c9c8d523378ed107ad24aef15d9d2fe5005f5
+34dafd9f39fcf80ffb6b46c491767fd1cbac72ef worker
